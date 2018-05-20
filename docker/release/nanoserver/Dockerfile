@@ -1,7 +1,7 @@
 # escape=`
 # Args used by from statements must be defined here:
-ARG NanoServerVersion=1709
-ARG WindowsServerCoreVersion=latest
+ARG NanoServerVersion=1803
+ARG WindowsServerCoreVersion=1803
 ARG WindowsServerCoreRepo=microsoft/windowsservercore
 ARG NanoServerRepo=microsoft/nanoserver
 
@@ -26,9 +26,9 @@ FROM ${NanoServerRepo}:$NanoServerVersion
 
 ARG VCS_REF="none"
 ARG PS_VERSION=6.0.2
-ARG IMAGE_NAME=microsoft/powershell
+ARG IMAGE_NAME=kfasick/powershell
 
-LABEL maintainer="PowerShell Team <powershellteam@hotmail.com>" `
+LABEL maintainer="Karl Fasick <karl_fasick@@hotmail.com>" `
       readme.md="https://github.com/PowerShell/PowerShell/blob/master/docker/README.md" `
       description="This Dockerfile will install the latest release of PS." `
       org.label-schema.usage="https://github.com/PowerShell/PowerShell/tree/master/docker#run-the-docker-image-you-built" `
